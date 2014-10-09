@@ -56,6 +56,7 @@ UIEdgeInsets scrollViewOriginalContentInsets;
     if(!self.infiniteScrollingView) {
         SVInfiniteScrollingView *view = [[SVInfiniteScrollingView alloc] initWithFrame:CGRectMake(0, self.contentSize.height, self.bounds.size.width, SVInfiniteScrollingViewHeight)];
         view.infiniteScrollingHandler = actionHandler;
+        [view setActivityIndicatorViewStyle:UIActivityIndicatorViewStyleWhite];
         view.scrollView = self;
         [self addSubview:view];
         
